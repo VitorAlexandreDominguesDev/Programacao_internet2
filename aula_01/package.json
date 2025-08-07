@@ -1,0 +1,22 @@
+{
+  "name": "programacao_internet2",
+  "version": "1.0.0",
+  "description": "Primeira aula de PI2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorAlexandreDominguesDev/Programacao_internet2.git"
+  },
+  "author": "Vitor Alexandre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VitorAlexandreDominguesDev/Programacao_internet2/issues"
+  },
+  "homepage": "https://github.com/VitorAlexandreDominguesDev/Programacao_internet2#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
