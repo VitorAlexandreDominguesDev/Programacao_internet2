@@ -1,0 +1,22 @@
+const mongoose  = require ('mongoose');
+
+// Criar uma conecção com o banco de dados
+async function conectaDB(){
+    const uri = process.env.MONGODB_URI;
+    if (!uri){
+        console.error(`MONGODB_URI não configurada ou não encontrada`);
+        process.exit(1);
+    }
+
+    mongoose.set("strictQuery", true);
+    
+    try{
+        await mongoose.connect(uri);
+        console.log(`Conectado ao Mongodb Atlas`);
+    } catch (error){
+        console.error(`Erro ao conectar ao Mongodb Atlas ${error}`)
+        process.exit(1);
+    }
+}
+
+module.exports = conectaDB
