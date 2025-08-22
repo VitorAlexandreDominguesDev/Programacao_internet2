@@ -1,6 +1,6 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require ('dotenv');
+const express = require('express'); //npm install express --save
+const mongoose = require('mongoose'); //npm install mongoose --save
+const dotenv = require ('dotenv'); //npm install dotenv --save
 const conectaDB = require ('./db'); 
 const alunosRouter = require('./routes/alunos.routes');//Rotas
 
@@ -14,7 +14,7 @@ dotenv.config();
 
 conectaDB(); // Fazendo a conexão com o Mongodb 
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
     res.json({message: "Hello World"});
 });
 

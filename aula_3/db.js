@@ -1,6 +1,5 @@
 const mongoose  = require ('mongoose');
 
-// Criar uma conecção com o banco de dados
 async function conectaDB(){
     const uri = process.env.MONGODB_URI;
     if (!uri){
@@ -10,7 +9,7 @@ async function conectaDB(){
 
     mongoose.set("strictQuery", true);
     
-    try{
+    try {
         await mongoose.connect(uri);
         console.log(`Conectado ao Mongodb Atlas`);
     } catch (error){
@@ -19,4 +18,4 @@ async function conectaDB(){
     }
 }
 
-module.exports = conectaDB
+module.exports = conectaDB;
