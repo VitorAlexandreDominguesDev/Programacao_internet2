@@ -20,6 +20,16 @@ app.use((err,req,res,next) => {
     console.error(`Erro:${err}`);
 
     if(err.name ==="CastError"){
-        return res.status(400).json({erro:"Id invalido"})
+        return res.status(400).json({erro:"Id invalido"});
     }
+
+    if(err.name ==="ValidationError"){
+        return res.status(400).json({erro:"Validação falhou", detalhes: err.errors});
+    }
+
+    res.status(500).json({erro:"Erro interno do servidor"});
 });
+
+app.listen(port,() => {
+    console.log(`Servidor rodando na porta ${port}`);
+})

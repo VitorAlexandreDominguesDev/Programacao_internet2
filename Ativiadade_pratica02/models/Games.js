@@ -23,8 +23,8 @@ const gameSchema = new mongoose.Schema(
         lancamento: {
             type: Number,
             required: [true,"Este campo é obrigatorio"],
-            min: [0,"Ano de lançamento muito curto"],
-            max: [150,"Ano de lançamento muito longo"],
+            min: [1950,"Ano de lançamento muito curto"],
+            max: [2025,"Ano de lançamento muito longo"],
         },
         createdAt: {
             type: Date,
